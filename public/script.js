@@ -167,6 +167,8 @@ AOS.init({
 });
 
 
+
+
 function Clicked() {
   const p = document.getElementById("content");
   p.classList.toggle("display");
@@ -204,6 +206,7 @@ function Nav() {
   const ham_x = document.getElementById("ham_X");
 
   if (!ham_t) {
+    document.body.classList.add("no-scroll");
     navv.style.display = "block";
     ham.style.display = "none";
     ham_x.style.display = "block";
@@ -221,6 +224,7 @@ function Nav_2() {
   const ham = document.getElementById("ham");
   const ham_x = document.getElementById("ham_X");
 
+  document.body.classList.remove("no-scroll");
   navv.style.display = "none";
   ham.style.display = "block";
   ham_x.style.display = "none";
